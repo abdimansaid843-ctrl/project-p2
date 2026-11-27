@@ -1,0 +1,333 @@
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+/* Main navigation header design */
+.site-header {
+    background-color: #272020;
+    width: 100%;
+    padding: 18px 0;
+
+    /* Adds a subtle shadow around the header */
+    box-shadow: 0 0 5px #292422,
+                0 0 10px #362c23,
+                0 0 15px #502b16;
+
+    /* Rounds the bottom corners */
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+/* Main website logo styling */
+.logo {
+    color: #00d9ff;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-decoration: none;
+    white-space: nowrap;
+
+    /* Cyan glowing effect */
+    text-shadow: 0 0 5px #659098,
+                 0 0 10px #b77f4b,
+                 0 0 15px #00d9ff;
+
+    transition: 0.3s;
+}
+
+/* Logo hover effect */
+.logo:hover {
+    color: white;
+
+    text-shadow: 0 0 5px #c84912,
+                 0 0 10px #b77f4b,
+                 0 0 15px #e85a08;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+   ========================================= */
+
+/* Container holding all navigation links */
+.nav-links {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+
+    /* Enables horizontal scrolling */
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    /* Prevents links from moving onto new lines */
+    white-space: nowrap;
+
+    /* Adds space around navigation links */
+    padding: 10px 20px;
+
+    /* Hides scrollbar but keeps scrolling enabled */
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    width: 100%;
+    min-width: 0;
+}
+
+/* Hides scrollbar in Chrome, Edge and Safari */
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+/* Individual navigation links */
+.nav-links a {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+
+    /* Prevents links from shrinking */
+    flex-shrink: 0;
+
+    /* Prevents layout movement when hovering */
+    border-bottom: 2px solid transparent;
+
+    transition: 0.3s;
+}
+
+/* Navigation link hover effect */
+.nav-links a:hover {
+    color: #00d9ff;
+
+    /* Cyan glowing text */
+    text-shadow: 0 0 5px #659098,
+                 0 0 10px #b77f4b,
+                 0 0 15px #00d9ff;
+
+    border-bottom: 2px solid #00d9ff;
+}
+
+
+/* =========================================
+   NAVIGATION ICONS
+   ========================================= */
+
+/* Styles icons inside navigation links */
+.nav-links a i {
+    font-size: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    transition: 0.3s;
+}
+
+/* Changes icon colour when hovering */
+.nav-links a:hover i {
+    color: #00d9ff;
+}
+
+
+/* =========================================
+   ACCOUNT BUTTONS AND SEARCH LAYOUT
+   ========================================= */
+
+/* Places account buttons and search next to each other */
+.account-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Places Login and Sign-up vertically */
+.account-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    /* Prevents buttons from shrinking */
+    flex-shrink: 0;
+}
+
+/* General account button styling */
+.account-btn {
+    display: block;
+    width: 82px;
+    padding: 8px 5px;
+
+    border-radius: 25px;
+    text-align: center;
+
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+/* Login button */
+.login-btn {
+    background-color: #00a9d6;
+    border: 1px solid #00a9d6;
+}
+
+/* Sign-up button */
+.signup-btn {
+    background-color: transparent;
+    border: 1px solid #00d9ff;
+}
+
+/* Login hover effect */
+.login-btn:hover {
+    background-color: #0086ad;
+    border-color: #0086ad;
+    color: white;
+}
+
+/* Sign-up hover effect */
+.signup-btn:hover {
+    background-color: #00d9ff;
+    border-color: #00d9ff;
+    color: #272020;
+}
+
+
+/* =========================================
+   SEARCH FORM
+   ========================================= */
+
+/* Container holding search input and button */
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    /* Uses remaining available space */
+    flex: 1;
+    min-width: 0;
+}
+
+/* Search input field */
+.search-form input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+
+    /* Dark search field design */
+    background-color: #383030;
+    border: 1px solid #625858;
+    border-radius: 25px;
+
+    /* Text styling */
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+
+    /* Space inside the input */
+    padding: 10px 15px;
+
+    outline: none;
+    transition: 0.3s;
+
+    /* Removes excessive default glow */
+    box-shadow: none;
+}
+
+/* Search placeholder text */
+.search-form input::placeholder {
+    color: #bdb5b5;
+}
+
+/* Search input when selected */
+.search-form input:focus {
+    background-color: #383030;
+    color: white;
+    border-color: #00d9ff;
+
+    /* Subtle cyan glow */
+    box-shadow: 0 0 6px #00d9ff;
+}
+
+/* Search input hover effect */
+.search-form input:hover {
+    border-color: #00d9ff;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+   ========================================= */
+
+/* Main search button */
+.search-form button {
+    background-color: #00a9d6;
+    border: 1px solid #00a9d6;
+    border-radius: 25px;
+
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    padding: 10px 16px;
+
+    /* Prevents button text from wrapping */
+    white-space: nowrap;
+
+    transition: 0.3s;
+
+    /* Subtle cyan shadow */
+    box-shadow: 0 0 5px #00a9d6;
+}
+
+/* Search button hover effect */
+.search-form button:hover {
+    background-color: #0086ad;
+    border-color: #0086ad;
+
+    color: white;
+    font-weight: bold;
+
+    box-shadow: 0 0 10px #00d9ff;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+   ========================================= */
+
+/* These styles apply to screens smaller than 768px */
+@media (max-width: 767px) {
+
+    /* Centres the logo on mobile */
+    .logo {
+        display: block;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Navigation adjustments for mobile */
+    .nav-links {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        gap: 20px;
+        margin-bottom: 15px;
+    }
+
+    /* Centres account buttons and search */
+    .account-search {
+        justify-content: center;
+        max-width: 500px;
+        margin: 15px auto 0;
+    }
+
+}
